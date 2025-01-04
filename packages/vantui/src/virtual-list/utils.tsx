@@ -15,7 +15,7 @@ export function getClosestIndex(rects, scrollTop) {
 
   while (start <= end) {
     const midIndex = Math.floor((start + end) / 2)
-    const midValue = rectsArr[midIndex].top
+    const midValue = rectsArr[midIndex].top || 0
 
     if (midValue === scrollTop) {
       return rectsArr[midIndex].index
